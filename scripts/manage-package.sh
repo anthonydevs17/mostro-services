@@ -20,8 +20,7 @@ function add_package() {
     --prefix="$local_path" \
     $MAIN_REPO \
     $BRANCH \
-    --squash \
-    --squash-opts="-P $mono_path"
+    --squash
 }
 
 function update_package() {
@@ -33,8 +32,7 @@ function update_package() {
     --prefix="$local_path" \
     $MAIN_REPO \
     $BRANCH \
-    --squash \
-    --squash-opts="-P $mono_path"
+    --squash
 }
 
 case $1 in

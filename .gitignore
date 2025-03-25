@@ -5,4 +5,5 @@ dist
 .mastra
 .env.development
 .env
+.env.production
 *.db

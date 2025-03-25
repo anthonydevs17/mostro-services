@@ -58,7 +58,8 @@ cd - > /dev/null
 
 # Update packages
 # Format: update_package "package_name" "source_path"
-update_package "playground" "packages/cli/src/playground"
-update_package "deployers/vercel" "deployers/vercel"
+# update_package "playground" "packages/cli/src/playground"
+update_package "commands/dev" "packages/cli/src/commands/dev"
+# update_package "deployers/vercel" "deployers/vercel"
 
 print_message "Update process completed!" "${GREEN}" 

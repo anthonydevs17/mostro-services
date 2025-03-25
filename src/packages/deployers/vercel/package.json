@@ -31,8 +31,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mastra/core": "^0.6.4",
-    "@mastra/deployer": "0.2.4",
+    "@mastra/core": "^0.6.5-alpha.0",
+    "@mastra/deployer": "0.2.5-alpha.0",
     "@rollup/plugin-virtual": "^3.0.2",
     "fs-extra": "^11.3.0"
   },

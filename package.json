@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "mastra dev",
+    "dev": "tsx src/packages/commands/dev/dev.ts",
     "update-versions": "node scripts/update-versions.js"
   },
   "keywords": [],

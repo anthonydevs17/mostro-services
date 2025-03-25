@@ -1,0 +1,25 @@
+{
+  "name": "@mastra/commands",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "mastra": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx index.ts"
+  },
+  "dependencies": {
+    "@mastra/core": "^0.6.4",
+    "@mastra/pg": "^0.2.5",
+    "@mastra/deployer": "^0.2.4-alpha.0",
+    "commander": "^12.1.0",
+    "execa": "^9.5.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "typescript": "^5.8.2",
+    "tsx": "^4.19.3"
+  }
+}

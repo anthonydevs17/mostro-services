@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx src/packages/commands/dev/dev.ts",
-    "update-versions": "node scripts/update-versions.js"
+    "update-versions": "node scripts/update-versions.js",
+    "migrate": "tsx src/packages/dynamicBuilder/postgres/migrate.ts",
+    "migrate-data": "tsx src/packages/dynamicBuilder/postgres/migrate.ts --insert-data"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +17,11 @@
   "dependencies": {
     "@ai-sdk/openai": "^1.3.0",
     "@mastra/core": "^0.6.4",
+    "@mastra/memory": "^0.2.5",
     "@mastra/pg": "^0.2.5",
+    "drizzle-orm": "^0.41.0",
     "mastra": "^0.4.3",
+    "pg": "^8.14.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {

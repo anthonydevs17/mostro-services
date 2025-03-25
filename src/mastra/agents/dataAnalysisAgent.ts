@@ -1,7 +1,7 @@
 import { openai } from "@ai-sdk/openai";
 import { Agent } from "@mastra/core/agent";
 import { webSearchTool } from "../tools/webSearchTool";
-
+import { pgMemory } from "../storage/postgres";
 export const dataAnalysisAgent = new Agent({
   name: "Data Analysis Agent",
   instructions: `
@@ -34,5 +34,6 @@ export const dataAnalysisAgent = new Agent({
     - Keep technical language accessible while maintaining accuracy
     - Focus on actionable insights and practical implications
   `,
-  model: openai("gpt-4o")
+  model: openai("gpt-4o"),
+  memory: pgMemory
 });

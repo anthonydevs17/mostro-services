@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { DraftingCompass, Network, Workflow } from 'lucide-react';
-import { Link, useLocation } from 'react-router';
+import { DraftingCompass, Network, Workflow } from "lucide-react";
+import { Link, useLocation } from "react-router";
 
 import {
   Sidebar,
@@ -14,13 +14,33 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-  useSidebar,
-} from '@/components/ui/sidebar';
+  useSidebar
+} from "@/components/ui/sidebar";
 
 export const LogoWithoutText = (props: { className: string }) => (
-  <svg {...props} xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-    <rect x="0.605469" y="0.5" width="20" height="20" rx="2.18625" fill="black" />
-    <circle cx="10.6059" cy="10.5004" r="6.0121" stroke="url(#paint0_linear_18520_30330)" strokeWidth="0.766389" />
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    width="21"
+    height="21"
+    viewBox="0 0 21 21"
+    fill="none"
+  >
+    <rect
+      x="0.605469"
+      y="0.5"
+      width="20"
+      height="20"
+      rx="2.18625"
+      fill="black"
+    />
+    <circle
+      cx="10.6059"
+      cy="10.5004"
+      r="6.0121"
+      stroke="url(#paint0_linear_18520_30330)"
+      strokeWidth="0.766389"
+    />
     <ellipse
       cx="10.6069"
       cy="10.501"
@@ -30,9 +50,21 @@ export const LogoWithoutText = (props: { className: string }) => (
       stroke="url(#paint1_linear_18520_30330)"
       strokeWidth="0.766389"
     />
-    <path d="M8.15234 10.5234H13.0931" stroke="url(#paint2_linear_18520_30330)" strokeWidth="0.766389" />
-    <path d="M9.36523 11.7773L11.8755 9.26708" stroke="url(#paint3_linear_18520_30330)" strokeWidth="0.766389" />
-    <path d="M11.877 11.7773L9.36669 9.26708" stroke="url(#paint4_linear_18520_30330)" strokeWidth="0.766389" />
+    <path
+      d="M8.15234 10.5234H13.0931"
+      stroke="url(#paint2_linear_18520_30330)"
+      strokeWidth="0.766389"
+    />
+    <path
+      d="M9.36523 11.7773L11.8755 9.26708"
+      stroke="url(#paint3_linear_18520_30330)"
+      strokeWidth="0.766389"
+    />
+    <path
+      d="M11.877 11.7773L9.36669 9.26708"
+      stroke="url(#paint4_linear_18520_30330)"
+      strokeWidth="0.766389"
+    />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -112,7 +144,13 @@ export const LogoWithoutText = (props: { className: string }) => (
 
 export const Agent = () => {
   return (
-    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="17"
+      height="16"
+      viewBox="0 0 17 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -130,25 +168,25 @@ export const Agent = () => {
 };
 const links = [
   {
-    name: 'Agents',
-    url: '/agents',
-    icon: Agent,
+    name: "Agents",
+    url: "/agents",
+    icon: Agent
   },
   {
-    name: 'Networks',
-    url: '/networks',
-    icon: Network,
+    name: "Networks",
+    url: "/networks",
+    icon: Network
   },
   {
-    name: 'Tools',
-    url: '/tools',
-    icon: DraftingCompass,
+    name: "Tools",
+    url: "/tools",
+    icon: DraftingCompass
   },
   {
-    name: 'Workflows',
-    url: '/workflows',
-    icon: Workflow,
-  },
+    name: "Workflows",
+    url: "/workflows",
+    icon: Workflow
+  }
 ];
 
 export function AppSidebar() {
@@ -160,12 +198,12 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="w-full pb-4 pl-1 pt-4">
         <span className="flex shrink-0">
-          {state === 'collapsed' ? (
+          {state === "collapsed" ? (
             <LogoWithoutText className="h-10 w-10 shrink-0 pl-0" />
           ) : (
             <span className="flex items-center gap-0.5">
               <LogoWithoutText className="h-10 w-10 shrink-0 pl-0" />
-              <span className="font-serif text-sm">Mastra</span>
+              <span className="font-serif text-sm">Mostro</span>
             </span>
           )}
         </span>
@@ -175,18 +213,23 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {links.map((item, index) => {
-                const [_, pagePath] = pathname.split('/');
+                const [_, pagePath] = pathname.split("/");
                 const lowercasedPagePath = item.name.toLowerCase();
-                const isActive = item.url === pathname || item.name === pathname || pagePath === lowercasedPagePath;
+                const isActive =
+                  item.url === pathname ||
+                  item.name === pathname ||
+                  pagePath === lowercasedPagePath;
                 return (
                   <SidebarMenuItem key={`${item.name}-${index}`}>
                     <SidebarMenuButton tooltip={item.name} asChild>
                       <Link
-                        className={`group/icon ${isActive ? 'text-primary bg-muted/50' : 'text-[#939393]'}`}
+                        className={`group/icon ${isActive ? "text-primary bg-muted/50" : "text-[#939393]"}`}
                         to={item.url}
                       >
                         <item.icon />
-                        <span className="text-[0.8rem] font-normal">{item.name}</span>
+                        <span className="text-[0.8rem] font-normal">
+                          {item.name}
+                        </span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -206,7 +249,7 @@ export function AppSidebar() {
                   tooltip="Docs"
                   asChild
                 >
-                  {state === 'collapsed' ? (
+                  {state === "collapsed" ? (
                     <a
                       href="https://mastra.ai/docs"
                       target="_blank"
@@ -234,7 +277,7 @@ export function AppSidebar() {
                   tooltip="GitHub"
                   asChild
                 >
-                  {state === 'collapsed' ? (
+                  {state === "collapsed" ? (
                     <a
                       href="https://github.com/mastra-ai/mastra"
                       target="_blank"

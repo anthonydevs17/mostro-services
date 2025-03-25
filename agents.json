@@ -1,0 +1,9 @@
+[
+  {
+    "id": "dynamicDataAnalysisAgent",
+    "name": "Dynamic Agent",
+    "instructions": "A data analysis agent that helps users analyze data from web searches",
+    "tools": ["webSearchTool"],
+    "model": "gpt-4o-mini"
+  }
+]

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "mastra dev"
+    "dev": "mastra dev",
+    "update-versions": "node scripts/update-versions.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.13",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"

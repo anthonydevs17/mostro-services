@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "@mastra/core": "^0.6.4",
+    "@mastra/deployer": "0.2.4",
+    "@mastra/playground-ui": "^2.0.4",
+    "@internal/lint": "^0.0.1",
+    "@mastra/client-js": "^0.1.12"
+  }
+}

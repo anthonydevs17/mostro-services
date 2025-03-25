@@ -1,6 +1,6 @@
 import { Mastra } from "@mastra/core";
 import { createLogger } from "@mastra/core/logger";
-// import { VercelDeployer } from "../deployers/vercel";
+import { VercelDeployer } from "../packages/deployers/vercel/src";
 import { webSearchAgent, dataAnalysisAgent } from "./agents";
 import { PgVector } from "@mastra/pg";
 import { researchNetwork } from "./networks";
@@ -14,10 +14,10 @@ export const mastra = new Mastra({
   logger: createLogger({
     name: "Mastra",
     level: "info"
+  }),
+  deployer: new VercelDeployer({
+    teamId: "team_9rvHPQcsumBPHpsQKRB2YGwc",
+    projectName: "mostro-services",
+    token: "MBMGCRcyBYZDjbVCoSgmDPGh"
   })
-  // deployer: new VercelDeployer({
-  //   teamId: "team_9rvHPQcsumBPHpsQKRB2YGwc",
-  //   projectName: "mastra-services",
-  //   token: "MBMGCRcyBYZDjbVCoSgmDPGh"
-  // })
 });
